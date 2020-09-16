@@ -1,0 +1,23 @@
+http://localhost:8080/api/checklog/{u}/{p}
+
+select * from user where unm = $u and pwd = $p;
+
+http://localhost:8080/api/register
+
+insert into pers (fnm,lnm,idn,bod,phn,eml,pwd) values ($fn,$ln,$id,$bd,$ph,$em,$pw);
+
+http://localhost:8080/getpwd/{tid}
+
+select pwd from user where tid = $tid
+
+http://localhost:8080/chgpwd/{tid}
+
+update user set pwd = $npass where tid = $tid
+
+http://localhost:8080/find/{tid}
+
+select * from pers where tid = $tid
+
+http://localhost:8080/update/{tid}
+
+update pers set fnm = $fnm, lnm = $lnm, idn = $idn, bod = $bod, phn = $phn, eml = $eml where tid = $tid
