@@ -1,3 +1,5 @@
+using mysql in spring
+
 http://localhost:8080/api/checklog/{u}/{p}
 
 select * from user where unm = $u and pwd = $p;
